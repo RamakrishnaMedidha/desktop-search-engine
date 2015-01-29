@@ -1,0 +1,28 @@
+import os
+dict={}
+for file in os.listdir("/home/swecha/prog/"):
+        if "txt"== file.split('.')[1]:
+                f=open( "/home/swecha/prog/" +file,'r')
+
+                lines=f.readlines()
+                for line in lines:
+                        words=line.split()
+                        for word in words:
+                                if word not in dict:
+                                        dict[word]=[file]
+                                else:
+                                        if file in dict[word]:
+                                                continue
+                                        else:
+                                                dict[word].append(file)
+
+                f.close()
+print dict
+f=open("sa.json",'w')
+import json
+json.dump(dict,f)
+f.close()
+
+
+
+
