@@ -1,0 +1,1 @@
+In some situations the user may not aware of the file name and folder name ,but he/she know some information or words in that file .so here we developed a Desktop Search Engine Applicaton by using this Application  we can easily determine the file name and path of that file  based on the word  provided by the user
